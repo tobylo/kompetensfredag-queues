@@ -62,8 +62,7 @@ namespace Infra.Storyteller
             var messagesToSend = story.Parts.Select(ToMessage).ToList();
             foreach (var message in messagesToSend)
             {
-                _queueService.SendMessageAsync(new QueueConfiguration(QueueType.AmazonSimpleQueueService, ""), message)
-                    .Wait();
+                PostToInputQueue(message);
             }
 
             PostStoryToSlack();
@@ -87,6 +86,12 @@ namespace Infra.Storyteller
                     Console.WriteLine($"Nope, not like that. {e.Message}");
                 }
             }
+        }
+
+        private static void PostToInputQueue(Message<InMessage> message)
+        {
+            _queueService.SendMessageAsync(new QueueConfiguration(QueueType.AmazonSimpleQueueService, ""), message)
+                .Wait();
         }
 
         private static void PostCountDownToSlack()
@@ -123,6 +128,10 @@ namespace Infra.Storyteller
                 {
                     part.MissingWord = message.Data.Word;
                     part.SolvedBy = message.Data.TeamName;
+                }
+                else
+                {
+                    PostToSlack($"Nu glömde {message.Data.TeamName} att följa best practice för spårbarhet av meddelanden");
                 }
                 successfullyProcessedMessages.Add(message);
             }
