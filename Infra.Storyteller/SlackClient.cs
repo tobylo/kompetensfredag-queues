@@ -21,8 +21,9 @@ namespace Infra.Storyteller
         {
             using (WebClient webClient = new WebClient())
             {
+                var json = JsonConvert.SerializeObject(message);
                 webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
-                byte[] request = System.Text.Encoding.UTF8.GetBytes("payload=" + JsonConvert.SerializeObject(message));
+                byte[] request = System.Text.Encoding.UTF8.GetBytes("payload=" + json);
                 byte[] response = webClient.UploadData(this._webHookUri, "POST", request);
 
                 // ...handle response...

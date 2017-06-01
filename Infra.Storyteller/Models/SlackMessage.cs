@@ -13,10 +13,13 @@ namespace Infra.Storyteller.Models
         [JsonProperty("text")]
         public string Text { get; set; }
 
-        [JsonProperty("icon_emoji")]
-        public string Icon
-        {
-            get { return ":computer:"; }
-        }
+
+        [JsonProperty("mrkdwn")]
+        public string Markdown => "true";
+        //[JsonProperty("icon_emoji")]
+        //public string Icon
+        //{
+        //    get { return ":computer:"; }
+        //}
     }
 }
