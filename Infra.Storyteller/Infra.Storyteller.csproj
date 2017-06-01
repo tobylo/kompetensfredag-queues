@@ -14,4 +14,8 @@
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infra.QueueProcessor\Infra.QueueProcessor.csproj" />
+  </ItemGroup>
 </Project>
