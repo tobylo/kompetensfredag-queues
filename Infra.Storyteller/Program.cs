@@ -38,7 +38,7 @@ namespace Infra.Storyteller
             {
                 Parts = new List<Part>
                 {
-                    new Part("*Min häftiga hund*\nDet var en gång en", WordClass.AdjektivSingular),
+                    new Part("*En liten saga*\nDet var en gång en", WordClass.AdjektivSingular),
                     new Part("", WordClass.SubstantivSingularObestamd),
                     new Part("som bodde i", WordClass.Plats),
                     new Part(".\nVarje morgon brukade", WordClass.SubstantivSingularBestamd),
@@ -47,10 +47,10 @@ namespace Infra.Storyteller
                     new Part(". Tillsammans brukade de gå ut och", WordClass.VerbGrundform),
                     new Part(". Det gillade de, eftersom de alltid blev så", WordClass.AdjektivPlural),
                     new Part("av det.\nEn dag var inte som alla andra. När de kom till", WordClass.SubstantivSingularBestamd),
-                    new Part("var allting borta.", WordClass.SubstantivSingularBestamd),
+                    new Part("var allting borta.", WordClass.SubstantivPluralBestamd),
                     new Part("blev förstås väldigt förvånade och bestämde sig för att hämta ett par", WordClass.SubstantivPluralObestamd),
                     new Part(". De visste att sådana skulle finnas i", WordClass.Plats),
-                    new Part(".\nPå vägen dit mötte de en gammal gubbe. Han tittade häpet på dem och sa: \"", WordClass.Interjektion),
+                    new Part(".\nPå vägen dit mötte de en gammal gubbe. Han tittade häpet på dem och sa:\"", WordClass.Interjektion),
                     new Part("!\" De gamla vännerna tittade på varandra och", WordClass.VerbPreteritum),
                     new Part(". De visste inte riktigt vad de skull tro. Men efter att ha", WordClass.VerbSupinum),
                     new Part("en stund kom de fram till att det nog var bäst att", WordClass.VerbGrundform),

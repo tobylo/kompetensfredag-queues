@@ -13,7 +13,8 @@ namespace Infra.QueueProcessor.MessageModels
         AdjektivPlural,
         Plats,
         Interjektion,
-        VerbGrundform
+        VerbGrundform,
+        SubstantivPluralBestamd
     }
 
     public class InMessage
