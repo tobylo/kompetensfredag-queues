@@ -37,21 +37,26 @@ namespace Infra.Storyteller
             {
                 Parts = new List<Part>
                 {
-                    new Part("Jag var ute och", WordClass.Verb),
-                    new Part("en", WordClass.Adjective),
-                    new Part("dag. Plötsligt kom en", WordClass.Noun),
-                    new Part("från ingenstans och", WordClass.Verb),
-                    new Part("", WordClass.Preposition),
-                    new Part("mig.\nJag blev mycket", WordClass.Adjective),
-                    new Part("eftersom det var en", WordClass.Adjective),
-                    new Part("", WordClass.Noun),
-                    new Part("!\nJag bestämde mig för att", WordClass.Verb),
-                    new Part("innan", WordClass.Noun),
-                    new Part("hunnit springa iväg.\nFörsiktigt", WordClass.Verb),
-                    new Part("jag", WordClass.Noun),
-                    new Part(", och gick sedan till", WordClass.Noun),
-                    new Part("för att", WordClass.Verb),
-                    new Part("", WordClass.Noun)
+                    new Part("Min häftiga hund\nDet var en gång en", WordClass.AdjektivSingular),
+                    new Part("", WordClass.SubstantivSingularObestamd),
+                    new Part("som bodde i", WordClass.Plats),
+                    new Part(".\nVarje morgon brukade", WordClass.SubstantivSingularBestamd),
+                    new Part("gå till en", WordClass.SubstantivSingularObestamd),
+                    new Part(". Där brukade hen träffa sin vän, som kallades", WordClass.SubstantivSingularBestamd),
+                    new Part(". Tillsammans brukade de gå ut och", WordClass.VerbGrundform),
+                    new Part(". Det gillade de, eftersom de alltid blev så", WordClass.AdjektivPlural),
+                    new Part("av det.\nEn dag var inte som alla andra. När de kom till", WordClass.SubstantivSingularBestamd),
+                    new Part("var allting borta.", WordClass.SubstantivSingularBestamd),
+                    new Part("blev förstås väldigt förvånade och bestämde sig för att hämta ett par", WordClass.SubstantivPluralObestamd),
+                    new Part(". De visste att sådana skulle finnas i", WordClass.Plats),
+                    new Part(".\nPå vägen dit mötte de en gammal gubbe. Han tittade häpet på dem och sa: \"", WordClass.Interjektion),
+                    new Part("!\" De gamla vännerna tittade på varandra och", WordClass.VerbPreteritum),
+                    new Part(". De visste inte riktigt vad de skull tro. Men efter att ha", WordClass.VerbSupinum),
+                    new Part("en stund kom de fram till att det nog var bäst att", WordClass.VerbInfinitiv),
+                    new Part("ordentligt. Det brukade alltid göra saker lite klarare. Så det gjorde de. Efter ungefär en timme tyckte de att def fick räcka. Det var dags att gå hem igen. De sa hejdå till gubben och bestämde sig för att träffas igen nästa vecka och fortsätta.\nNär", WordClass.SubstantivSingularBestamd),
+                    new Part("kom hem den kvällen kändes det som att dagen hade varit", WordClass.AdjektivSingular),
+                    new Part(". Det kan bli så när det händer någonting utöver det vanliga. \"Oj, vad jag är", WordClass.AdjektivSingular),
+                    new Part("\" tänkte hen och", WordClass.VerbPreteritum)
                 }
             };
 

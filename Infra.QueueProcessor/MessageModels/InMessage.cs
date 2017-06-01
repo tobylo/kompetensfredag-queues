@@ -4,10 +4,17 @@ namespace Infra.QueueProcessor.MessageModels
 {
     public enum WordClass
     {
-        Noun,
-        Verb,
-        Adjective,
-        Preposition
+        SubstantivPluralObestamd,
+        SubstantivSingularObestamd,
+        SubstantivSingularBestamd,
+        VerbPreteritum,
+        VerbSupinum,
+        VerbInfinitiv,
+        AdjektivSingular,
+        AdjektivPlural,
+        Plats,
+        Interjektion,
+        VerbGrundform
     }
 
     public class InMessage
