@@ -59,6 +59,8 @@ namespace Infra.QueueProcessor
             var successfullyProcessedMessages = new List<Message<InMessage>>();
 
             // TODO: Act!
+            QueueConfiguration queueConfiguration = null;
+            QueuePublisher publisher = null;
 
             return successfullyProcessedMessages;
         }
