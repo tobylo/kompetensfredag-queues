@@ -63,11 +63,11 @@ namespace Infra.Storyteller
 
             PostStartMessage();
             PostToSlack("Vi börjar om 25 minuter");
-            //Thread.Sleep(TimeSpan.FromMinutes(15));
+            Thread.Sleep(TimeSpan.FromMinutes(15));
             PostToSlack("10 minuter kvar");
-            //Thread.Sleep(TimeSpan.FromMinutes(5));
+            Thread.Sleep(TimeSpan.FromMinutes(5));
             PostToSlack("5 minuter kvar");
-            //Thread.Sleep(TimeSpan.FromMinutes(4));
+            Thread.Sleep(TimeSpan.FromMinutes(4));
             PostToSlack("1 minut till start");
             PostCountDownToSlack();
             var messagesToSend = story.Parts.Select(ToMessage).ToList();
