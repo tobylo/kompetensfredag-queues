@@ -38,7 +38,7 @@ namespace Infra.Storyteller
             {
                 Parts = new List<Part>
                 {
-                    new Part("Min häftiga hund\nDet var en gång en", WordClass.AdjektivSingular),
+                    new Part("*Min häftiga hund*\nDet var en gång en", WordClass.AdjektivSingular),
                     new Part("", WordClass.SubstantivSingularObestamd),
                     new Part("som bodde i", WordClass.Plats),
                     new Part(".\nVarje morgon brukade", WordClass.SubstantivSingularBestamd),
@@ -53,7 +53,7 @@ namespace Infra.Storyteller
                     new Part(".\nPå vägen dit mötte de en gammal gubbe. Han tittade häpet på dem och sa: \"", WordClass.Interjektion),
                     new Part("!\" De gamla vännerna tittade på varandra och", WordClass.VerbPreteritum),
                     new Part(". De visste inte riktigt vad de skull tro. Men efter att ha", WordClass.VerbSupinum),
-                    new Part("en stund kom de fram till att det nog var bäst att", WordClass.VerbInfinitiv),
+                    new Part("en stund kom de fram till att det nog var bäst att", WordClass.VerbGrundform),
                     new Part("ordentligt. Det brukade alltid göra saker lite klarare. Så det gjorde de. Efter ungefär en timme tyckte de att def fick räcka. Det var dags att gå hem igen. De sa hejdå till gubben och bestämde sig för att träffas igen nästa vecka och fortsätta.\nNär", WordClass.SubstantivSingularBestamd),
                     new Part("kom hem den kvällen kändes det som att dagen hade varit", WordClass.AdjektivSingular),
                     new Part(". Det kan bli så när det händer någonting utöver det vanliga. \"Oj, vad jag är", WordClass.AdjektivSingular),
@@ -62,8 +62,13 @@ namespace Infra.Storyteller
             };
 
             PostStartMessage();
-            PostToSlack("Vi börjar om 15 minuter");
-            Thread.Sleep(TimeSpan.FromMinutes(15));
+            PostToSlack("Vi börjar om 25 minuter");
+            //Thread.Sleep(TimeSpan.FromMinutes(15));
+            PostToSlack("10 minuter kvar");
+            //Thread.Sleep(TimeSpan.FromMinutes(5));
+            PostToSlack("5 minuter kvar");
+            //Thread.Sleep(TimeSpan.FromMinutes(4));
+            PostToSlack("1 minut till start");
             PostCountDownToSlack();
             var messagesToSend = story.Parts.Select(ToMessage).ToList();
             foreach (var message in messagesToSend)
@@ -102,7 +107,7 @@ namespace Infra.Storyteller
 
         private static void PostCountDownToSlack()
         {
-            for (int i = 10; i > 0; i--)
+            for (int i = 5; i > 0; i--)
             {
                 PostToSlack($"{i}!");
                 Thread.Sleep(TimeSpan.FromSeconds(1));

@@ -9,7 +9,6 @@ namespace Infra.QueueProcessor.MessageModels
         SubstantivSingularBestamd,
         VerbPreteritum,
         VerbSupinum,
-        VerbInfinitiv,
         AdjektivSingular,
         AdjektivPlural,
         Plats,
