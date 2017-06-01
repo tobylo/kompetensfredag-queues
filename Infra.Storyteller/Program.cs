@@ -28,8 +28,8 @@ namespace Infra.Storyteller
 
 
             AWSCredentials credentials = new BasicAWSCredentials("", "");
-
-            QueueConfiguration outputQueueConfiguration = new QueueConfiguration(QueueType.AmazonSimpleQueueService, "");
+            QueueConfiguration outputQueueConfiguration = 
+                new QueueConfiguration(QueueType.AmazonSimpleQueueService, "");
 
             _queueService = new AwsQueueService(new AmazonSQSClient(credentials, RegionEndpoint.EUWest1),
                 _queueMessageValidator, _eventProxy);
