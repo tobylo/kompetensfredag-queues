@@ -28,7 +28,8 @@ namespace Infra.Storyteller
 
 
             AWSCredentials credentials = new BasicAWSCredentials("", "");
-            QueueConfiguration queueConfiguration = new QueueConfiguration(QueueType.AmazonSimpleQueueService, "");
+
+            QueueConfiguration outputQueueConfiguration = new QueueConfiguration(QueueType.AmazonSimpleQueueService, "");
 
             _queueService = new AwsQueueService(new AmazonSQSClient(credentials, RegionEndpoint.EUWest1),
                 _queueMessageValidator, _eventProxy);
@@ -79,12 +80,12 @@ namespace Infra.Storyteller
                 {
                     var messages =
                         _queueService.ReceiveMessagesAsync<OutMessage>(
-                            queueConfiguration).Result;
+                            outputQueueConfiguration).Result;
                     if (!messages.Any()) continue;
 
                     var successfullyProcessedMessages = ProcessMessages(messages);
 
-                    _queueService.DeleteMessagesAsync(queueConfiguration, successfullyProcessedMessages).Wait();
+                    _queueService.DeleteMessagesAsync(outputQueueConfiguration, successfullyProcessedMessages).Wait();
                 }
                 catch (Exception e)
                 {
