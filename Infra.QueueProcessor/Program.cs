@@ -29,7 +29,7 @@ namespace Infra.QueueProcessor
              * 2. New up your AWSQueueService with the credentials and information given to you
              * 3. Set up your QueueConfiguration with the given information 
              * 4. Receive messages
-             * 5. Process messages and publish your result to the outgoing queue
+             * 5. Process messages and publish your result to the outgoing queue as an OutMessage
              * 6. Don't forget to follow best practices and make use of the CorrelationId on the Messages.
              * 7. Delete the successfully processed messages from the in-queue
              * 8. Profit
