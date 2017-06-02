@@ -35,7 +35,7 @@ namespace Infra.QueueProcessor
              * 8. Profit
              */
 
-            AWSCredentials credentials = null;
+            BasicAWSCredentials credentials = null;
             QueueConfiguration queueConfiguration = null;
 
             _queueService = null;
